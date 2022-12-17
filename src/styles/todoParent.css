@@ -1,0 +1,34 @@
+#main > h1{
+    background-color: #ff5050;
+    width: 70%;
+    text-align: center;
+    text-decoration: underline;
+    border-radius: 10px;    
+}
+
+#textInput{
+    display: flex;
+}
+
+
+#btn{
+    margin-left: 10px;
+    width: 100px;
+    border: none;
+    border-radius: 7px;
+    background-color: white;
+    box-shadow: 2px 2px 8px;
+    transform: scale(1);
+    transition: background-color 2s ,transform .5s,color 1.5s ;
+}
+
+#btn:hover{
+    background-color: dimgrey;
+    transform:scale(1.2);
+    color: white;
+}
+
+#btn:active{
+    transform: translateY(3px);
+    transition: transform 0s;
+}

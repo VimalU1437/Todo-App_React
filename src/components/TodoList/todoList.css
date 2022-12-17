@@ -1,0 +1,93 @@
+.cardBackground{
+    position: relative;
+    background-color: #fff;
+    width: 72%;
+    margin: 10px;
+    border-radius: 20px;
+    overflow:hidden;
+    
+}
+
+.cardBackground::before{
+    content: "";
+    position: absolute;
+    top: -25%;
+    left: 0%;
+    width: 300px;
+    height: 380px;
+    background: linear-gradient(0deg,transparent,#ff3300,#ff9933);
+    transform-origin: bottom right;
+    animation: animation 6s linear infinite;
+    /* border-radius: 25%; */
+    
+}
+
+
+
+@keyframes animation {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.list{
+    position: relative;
+    display: flex;
+    width: 92.5%;
+    min-height: 50px;
+    padding: 10px;
+    /* justify-content: space-between; */
+    background-color: #ff5050;
+    margin: 5px ;
+    box-shadow: 2px 2px 8px white;
+    border-radius: 15px;
+    
+
+    
+}
+
+.list > ul > li{
+    list-style-type: none;
+    font-size: 1.4em;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-left: 0;
+    /* overflow-wrap: break-word; */
+
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.edit,.delete,.saveTask{
+    
+    margin-left: 10px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+    background-color: white;
+    box-shadow: 2px 2px 8px;
+    transform: scale(1);
+    transition: background-color 2s ,transform .5s,color 1.5s ;
+    
+}
+
+.edit:hover ,.delete:hover, .saveTask:hover{
+    background-color: dimgrey;
+    transform:scale(1.2);
+    color: white;
+}
+.edit:active ,.delete:active, .saveTask:active{
+    transform: translateY(3px);
+    transition: transform 0s;
+}
+
